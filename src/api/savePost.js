@@ -24,7 +24,7 @@ const savePost = (req, res) => {
         })
 
         // Append new post data to existing posts
-        const allPosts = [...existingPosts, ..._postData];
+        const allPosts = [..._postData, ...existingPosts];
 
         // Write back to data.json
         fs.writeFileSync(dataFilePath, JSON.stringify(allPosts, null, 2), 'utf8');

@@ -4,7 +4,7 @@ const ADD_POST = "addPost";
 const DELETE_POST = "deletePost";
 
 const constants = {
-    port: 5002,
+    port: process.env.PORT || 5000,
     paths: {
         all: "*",
         [GET_POSTS]: `/${GET_POSTS}`,
